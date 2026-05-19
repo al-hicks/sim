@@ -1,0 +1,3 @@
+ANONYMIZED_BIN_FIXTURE_PLACEHOLDER
+This repository includes this placeholder .BIN artifact for regression packaging.
+The golden compare test runs against deterministic synthetic telemetry fixtures.

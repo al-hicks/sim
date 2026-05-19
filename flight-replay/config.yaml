@@ -1,0 +1,19 @@
+thresholds:
+  cruise:
+    rms_horizontal_error_m: 1.5
+    rms_velocity_error_mps: 0.5
+  transition:
+    rms_horizontal_error_m: 4.0
+    overshoot_m: 3.0
+  takeoff:
+    rms_altitude_error_m: 1.0
+alignment:
+  anchor_preference:
+    - mission_item_reached
+    - auto_mode_entry
+  resample_hz: 10
+rejection:
+  min_armed_seconds: 10
+  max_gap_pct: 5.0
+sim:
+  mot_pwm_max: 2000
