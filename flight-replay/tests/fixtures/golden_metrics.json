@@ -1,0 +1,70 @@
+{
+  "alignment": {
+    "real_anchor_offset_from_arming_s": 5.0,
+    "resample_hz": 10,
+    "sitl_anchor_offset_from_arming_s": 5.0
+  },
+  "overall": {
+    "cross_track_error_m": 7.070103932295587,
+    "lag_iqr_ms": 100.0,
+    "lag_median_ms": 0.0,
+    "max_altitude_error_m": 0.25,
+    "max_horizontal_error_m": 0.5095426821982875,
+    "motor_saturation_pct": 26.666666666666668,
+    "oscillation_peak_hz": 0.7031250000000024,
+    "oscillation_power": 0.07887551716915063,
+    "overshoot_m": 0.5095426821982875,
+    "rms_altitude_error_m": 0.16384188824331028,
+    "rms_horizontal_error_m": 0.475531583619199,
+    "rms_velocity_error_mps": 0.02394645218987938
+  },
+  "phases": {
+    "cruise": {
+      "cross_track_error_m": 4.716165542871091,
+      "max_altitude_error_m": 0.19598706916150732,
+      "max_horizontal_error_m": 0.49611032405603045,
+      "motor_saturation_pct": 28.246753246753247,
+      "overshoot_m": 0.49611032405603045,
+      "rms_altitude_error_m": 0.1574365891095821,
+      "rms_horizontal_error_m": 0.47053601785636306,
+      "rms_velocity_error_mps": 0.022260633633368637
+    },
+    "other": {
+      "cross_track_error_m": 12.126736916121933,
+      "max_altitude_error_m": 0.1959876932263569,
+      "max_horizontal_error_m": 0.5095426821982875,
+      "motor_saturation_pct": 33.05084745762712,
+      "overshoot_m": 0.5095426821982875,
+      "rms_altitude_error_m": 0.17226471027219228,
+      "rms_horizontal_error_m": 0.4972923719732016,
+      "rms_velocity_error_mps": 0.021675678828802322
+    },
+    "takeoff": {
+      "cross_track_error_m": 0.2752735166828223,
+      "max_altitude_error_m": 0.25,
+      "max_horizontal_error_m": 0.44799455987743103,
+      "motor_saturation_pct": 0.0,
+      "overshoot_m": 0.44799455987743103,
+      "rms_altitude_error_m": 0.14130358205815166,
+      "rms_horizontal_error_m": 0.43857825745885043,
+      "rms_velocity_error_mps": 0.02892224309038685
+    },
+    "transition": {
+      "cross_track_error_m": 6.149984442916841,
+      "max_altitude_error_m": 0.19554751841404538,
+      "max_horizontal_error_m": 0.5025176975416562,
+      "motor_saturation_pct": 22.22222222222222,
+      "overshoot_m": 0.5025176975416562,
+      "rms_altitude_error_m": 0.17247446255710872,
+      "rms_horizontal_error_m": 0.47323778518002696,
+      "rms_velocity_error_mps": 0.027821508444231025
+    }
+  },
+  "mission": {
+    "total_flight_time_error_s": 0.0
+  },
+  "informational": {
+    "battery_current_error_rms_a": 0.3021458160549832,
+    "battery_voltage_error_rms_v": 0.2029900572277693
+  }
+}

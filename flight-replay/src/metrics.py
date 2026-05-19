@@ -266,7 +266,7 @@ def _oscillation_score(attitude_error_deg: pd.Series, fs_hz: float) -> dict[str,
     p_band = pxx[band]
     return {
         "peak_frequency_hz": float(f_band[np.argmax(p_band)]),
-        "integrated_power": float(np.trapz(p_band, f_band)),
+        "integrated_power": float(np.trapezoid(p_band, f_band)),
     }
 
 

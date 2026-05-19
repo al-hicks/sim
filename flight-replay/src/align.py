@@ -149,7 +149,16 @@ def _overlap_window(real: pd.DataFrame, sitl: pd.DataFrame, hz: int) -> tuple[pd
 
 def _reindex_to_grid(frame: pd.DataFrame, grid: np.ndarray) -> pd.DataFrame:
     work = frame.set_index("t_mission_s")
-    work = work.reindex(work.index.union(grid)).sort_index().interpolate(method="linear")
-    out = work.reindex(grid).ffill().bfill()
+    expanded = work.reindex(work.index.union(grid)).sort_index()
+
+    numeric_cols = [c for c in expanded.columns if pd.api.types.is_numeric_dtype(expanded[c])]
+    categorical_cols = [c for c in expanded.columns if c not in numeric_cols]
+    out = pd.DataFrame(index=expanded.index)
+    if numeric_cols:
+        out[numeric_cols] = expanded[numeric_cols].interpolate(method="linear")
+    for col in categorical_cols:
+        out[col] = expanded[col].ffill().bfill()
+
+    out = out.reindex(grid).ffill().bfill()
     out["t_mission_s"] = out.index
     return out.reset_index(drop=True)
