@@ -1,0 +1,25 @@
+{
+  "waypoints": [
+    {
+      "command_id": 22,
+      "command_name": "NAV_TAKEOFF",
+      "lat": 37.4275,
+      "lon": -122.1697,
+      "alt_m": 10.0
+    },
+    {
+      "command_id": 16,
+      "command_name": "NAV_WAYPOINT",
+      "lat": 37.4277,
+      "lon": -122.1693,
+      "alt_m": 20.0
+    },
+    {
+      "command_id": 21,
+      "command_name": "NAV_LAND",
+      "lat": 37.4279,
+      "lon": -122.1690,
+      "alt_m": 5.0
+    }
+  ]
+}

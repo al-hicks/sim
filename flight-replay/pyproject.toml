@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flight-replay"
+version = "0.1.0"
+description = "ArduPilot SITL flight replay and telemetry comparator framework"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Flight Replay Team" }
+]
+dependencies = [
+  "duckdb>=1.2.0",
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "plotly>=5.24.0",
+  "pyarrow>=16.0.0",
+  "pydantic>=2.8.0",
+  "pymavlink>=2.4.41",
+  "PyYAML>=6.0.2",
+  "scipy>=1.13.0",
+  "typer>=0.12.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2.0",
+]
+
+[project.scripts]
+flight-replay = "src.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
